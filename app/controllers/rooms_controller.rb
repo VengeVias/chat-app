@@ -2,6 +2,7 @@ class RoomsController < ApplicationController
   def new
     @room = Room.new
   end
+
   def create
     @room = Room.new(room_params)
     if @room.save
@@ -9,6 +10,10 @@ class RoomsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def index
+    
   end
 
   private
